@@ -1,5 +1,5 @@
 /*
- * $Id: test.java 1172 2008-02-24 13:50:48Z shodan $
+ * $Id: test.java 2055 2009-11-06 23:09:58Z shodan $
  */
 
 package org.sphx.api;
@@ -34,12 +34,14 @@ public class test
 			System.out.print ( "-l, --limit <COUNT>\tretrieve COUNT matches (default: 20)\n" );
 			System.out.print ( "-ga, --geoanchor <LATATTR> <LONGATTR> <LAT> <LONG>\n" );
 			System.out.print ( "\t\t\tset anchor for geodistance\n" );
+			System.out.print ( "--select <EXPRS>\tselect the listed expressions only\n" );
+
 			System.exit ( 0 );
 		}
 
 		StringBuffer q = new StringBuffer();
 		String host = "localhost";
-		int port = 3312;
+		int port = 9312;
 		int mode = SphinxClient.SPH_MATCH_ALL;
 		String index = "*";
 		int offset = 0;
@@ -71,6 +73,7 @@ public class test
 			else if ( "-o".equals(arg) || "--offset".equals(arg) )		offset = Integer.parseInt(argv[++i]);
 			else if ( "-l".equals(arg) || "--limit".equals(arg) )		limit = Integer.parseInt(argv[++i]);
 			else if ( "-ga".equals(arg)|| "--geoanchor".equals(arg) )	cl.SetGeoAnchor ( argv[++i], argv[++i], Float.parseFloat(argv[++i]), Float.parseFloat(argv[++i]) );
+			else if ( "--select".equals(arg) )							cl.SetSelect ( argv[++i] );
 			else q.append ( argv[i] ).append ( " " );
 		}
 
@@ -133,6 +136,7 @@ public class test
 						case SphinxClient.SPH_ATTR_INTEGER:
 						case SphinxClient.SPH_ATTR_ORDINAL:
 						case SphinxClient.SPH_ATTR_FLOAT:
+						case SphinxClient.SPH_ATTR_BIGINT:
 							/* longs or floats; print as is */
 							System.out.print ( info.attrValues.get(a) );
 							break;
@@ -155,5 +159,5 @@ public class test
 }
 
 /*
- * $Id: test.java 1172 2008-02-24 13:50:48Z shodan $
+ * $Id: test.java 2055 2009-11-06 23:09:58Z shodan $
  */

@@ -1,5 +1,5 @@
 //
-// $Id: ha_sphinx.h 1169 2008-02-22 12:52:37Z shodan $
+// $Id: ha_sphinx.h 1428 2008-09-05 18:06:30Z xale $
 //
 
 #ifdef USE_PRAGMA_INTERFACE
@@ -153,6 +153,12 @@ private:
 bool sphinx_show_status ( THD * thd );
 #endif
 
+int sphinx_showfunc_total_found ( THD *, SHOW_VAR *, char * );
+int sphinx_showfunc_total ( THD *, SHOW_VAR *, char * );
+int sphinx_showfunc_time ( THD *, SHOW_VAR *, char * );
+int sphinx_showfunc_word_count ( THD *, SHOW_VAR *, char * );
+int sphinx_showfunc_words ( THD *, SHOW_VAR *, char * );
+
 //
-// $Id: ha_sphinx.h 1169 2008-02-22 12:52:37Z shodan $
+// $Id: ha_sphinx.h 1428 2008-09-05 18:06:30Z xale $
 //
