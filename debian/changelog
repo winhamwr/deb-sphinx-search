@@ -1,4 +1,4 @@
-sphinx-search (0.9.9-1bbox1) hardy intrepid; urgency=low
+sphinx-search (0.9.9-1bbox1) hardy; urgency=low
 
   * Hardy backport and upstream upgrade to 0.9.9
 
