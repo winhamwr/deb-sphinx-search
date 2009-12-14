@@ -5,8 +5,8 @@ Maintainer: John Leach <john@brightbox.co.uk>
 Build-Depends: debhelper (>= 6), autotools-dev, g++ (>= 4), libmysqlclient15-dev, libpq-dev, cdbs (>= 0.4)
 Standards-Version: 3.7.3
 Homepage: http://www.sphinxsearch.com
-XS-Vcs-git: git://github.com/johnl/deb-sphinx-search/tree/master
-XS-Vcs-browser: http://github.com/johnl/deb-sphinx-search/tree/master
+XS-Vcs-git: git://github.com/winhamwr/deb-sphinx-search/tree/master
+XS-Vcs-browser: http://github.com/winhamwr/deb-sphinx-search/tree/master
 
 Package: sphinx-search
 Section: utils
