@@ -1,3 +1,9 @@
+sphinx-search (0.9.9-1pstat1) hardy; urgency=low
+
+  * Hardy backport and upstream upgrade to 0.9.9
+
+ -- Wes Winham <winhamwr@gmail.com>  Mon, 14 Dec 2009 13:56:51 -0500
+
 sphinx-search (0.9.8.1-1bbox1) intrepid; urgency=low
 
   * Initial release
