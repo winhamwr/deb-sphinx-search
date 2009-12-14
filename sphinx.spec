@@ -1,11 +1,11 @@
 Summary: Sphinx full-text search engine
 Name: sphinx
-Version: 0.9.8.1
-Release: r1533
+Version: 0.9.9
+Release: r2117
 License: GPL
 Group: Development
-BuildRoot: /tmp/sphinx-%{version}
-Source: http://sphinxsearch.com/downloads/sphinx-%{version}.tar.gz
+BuildRoot: /tmp/sphinx-%{version}-svn-%{release}
+Source: http://sphinxsearch.com/downloads/sphinx-%{version}-svn-%{release}.tar.gz
 URL: http://sphinxsearch.com/
 BuildRequires: mysql-devel
 Requires: mysql
@@ -17,7 +17,7 @@ designed with indexing database content in mind.
 
 
 %prep
-%setup -n sphinx-%{version}
+%setup -n sphinx-%{version}-svn-%{release}
 
 
 %build
