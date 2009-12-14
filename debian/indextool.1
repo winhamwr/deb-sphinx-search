@@ -1,0 +1,43 @@
+.TH INDEXTOOL 1 "2008-12-12" GNU "Sphinx SQL full-text search engine"
+
+.SH NAME
+indextool \- Debugging tool used to dump miscellaneous information about a physical Sphinx index.
+
+.SH SYNOPSIS
+.B indextool <command> [options]
+
+.SH DESCRIPTION
+.B indextool
+is a tool to gather information about a physical index and is part of the Sphinx SQL full-text indexer suite.
+
+.SH COMMANDS
+.TP
+--dumpheader <FILENAME.sph>
+Quickly dump the provided index header file without touching any other index files or even the configuration file. The report provides a breakdown of all the index settings, in particular the entire attribute and filed list. Prior to 0.9.9-rc2, this command was present in CLI search utility.
+.TP
+--dumpheader <INDEXNAME>
+Dump index header by index name with looking up the header path in the configuration file
+.TP
+--dumpdocids <INDEXNAME>
+Dump document IDs by index name. It takes the data from attribute (.spa) file and therefore requires docinfo=extern to work
+.TP
+--dumphitlist <INDEXNAME> <KEYWORD>
+Dump all the hits (occurences) of a given keyword in a given index
+
+.SH OPTIONS
+.TP
+-c, --config=<file>
+Override the built-in config file names
+
+.SH FILES
+.I /etc/sphinx-search/sphinx.conf
+.RS
+default configuration file.
+
+.SH AUTHOR
+Wes Winham <winhamwr@gmail.com>
+
+.SH SEE ALSO
+.BR searchd (1),
+.BR indexer (1),
+.BR search (1),
