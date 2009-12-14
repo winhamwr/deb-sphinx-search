@@ -1,3 +1,9 @@
+sphinx-search (0.9.9-1bbox2) hardy; urgency=low
+
+  * Man page additions for indextool
+
+ -- Wes Winham <winhamwr@gmail.com>  Mon, 14 Dec 2009 18:10:11 -0500
+
 sphinx-search (0.9.9-1bbox1) hardy; urgency=low
 
   * Hardy backport and upstream upgrade to 0.9.9
